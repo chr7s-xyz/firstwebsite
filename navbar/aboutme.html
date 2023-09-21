@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styleam.css">
+</head>
+
+<body>
+  <div class="container">
+    <div id="box1" class="box">
+      <section class="box1-section">
+        <h2>Welcome to my page ;)</h2>
+        <p class="firstpara">Thankyou for visiting this page. Although, I have no idea what to share about me, i'll like
+          to show you some of my memories.
+
+        </p>
+        <p class="secondpara"> &#8594;</p>
+        <a href="index.html">Back to main page ...</a>
+      </section>
+    </div>
+    <div id="box2" class="box">
+      <div class="griditem">1</div>
+      <div class="griditem">2</div>
+      <div class="griditem">3</div>
+      <div class="griditem">4</div>
+      <div class="griditem"><span>Meet the Troublemakers !</span></div>
+      <div class="griditem">6</div>
+      <div class="griditem">7</div>
+      <div class="griditem">8</div>
+      <div class="griditem">9</div>
+    </div>
+    <div id="box3" class="box">
+      <div class="boxchild" id="boxchild1">
+        <span>Tap &#8595; </span>
+        <img src="school.jpg" alt="Image 1" class="image" onclick="visibl('text1')">
+        <div class="text" id="text1" onclick="visibl('text1')">
+          This is St Louis High School ,where i went for schooling and did my SSC. It always feels nostalgic when thinking about school. It's also my parish.
+
+        </div>
+      </div>
+      <div class="boxchild" id="boxchild2">
+        <span>Tap &#8595; </span>
+        <img src="collegef.jpg" alt="Image 2" class="image" onclick="visibl('text2')">
+        <div class="text" id="text2" onclick="visibl('text2')">
+          This is St Andrew's College ,Bandra where i attended my Junior College as a Science student and currently enrolled in B.Sc I.T program.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  
+  <script>
+    function visibl(elementId){
+      var element =  document.getElementById(elementId);
+      var image = element.previousElementSibling;
+      
+      if(element.style.display === "none"){
+        element.style.display = "block";
+        image.style.display = "none";
+      } else {
+            element.style.display = "none";
+        image.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>
