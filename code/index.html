@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav id="nav">
+       <span class="logo">chr7s</span>
+
+
+        <div class="links">
+            <i class='bx bxs-down-arrow ' id="svg"></i>
+            <ul>
+                <li> <a href="index.html">Home</a></li>
+                <li> <a href="aboutme.html">About me</a></li>
+                <li><a href="https://instagram.com/chr7s.dsouza?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D">Contact me</a></li>
+            </ul>
+        </div>
+    </nav>
+<main class="main" id="main">
+    <div class="suggestions">
+    <form id="form"  action="connect.php" method="POST">
+        
+<label for="name">Enter your name :</label>
+<input type="text" class="name" name="name" id="name" required /><br>
+
+<textarea placeholder="Enter your suggestions here " name="textarea" rows="30" cols="60" required ></textarea><br>
+<button type="submit" class="submitx" name="submit" id="submit" >Submit</button>
+
+    </form>
+    <p id="submitp">Thanks for your input !</p>
+</div>
+<div class="ar">
+<article>
+    <div id="box1" class="box"><a href="https://instagram.com/chr7s.dsouza?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><div class="text">Lets connect through music!!</div></a></div>
+    <div id="box2" class="box"><a href="novel.html"><div class="text">Novels I like to read! </div></a></div>
+    <div id="box3" class="box"><a href="https://instagram.com/chr7s.dsouza?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><div class="text">More projects by me.</div></a></div>
+    
+</article>
+</div>
+</main>
+
+</body>
+<script>
+     /*  var form=document.getElementById("form");
+    /* submitform("event",()=>{
+        event.preventDefault();
+
+    }) 
+    function submitform(event){
+        event.preventDefault();
+    }
+    form.addEventListener('submit',submitform);
+    */
+    
+
+
+
+    let menubtn = document.getElementById('svg');
+    let nav = document.getElementsByTagName('nav')[0];
+    menubtn.addEventListener("click", () => {
+        nav.classList.toggle('active');
+    })
+
+    submit(()=>{
+        let submitp = document.getElementById('submitp');
+        submitp.classList.toggle('submitpactive');
+    })
+
+    document.getElementById("form").addEventListener("submit",function(event){
+        event.preventDefault();
+
+  document.getElementById("form").reset();
+
+  document.getElementById("submitp").style.display="block";
+    });
+
+</script>
+
+</html>
